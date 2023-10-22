@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React, { use } from "react";
 import { TypeAnimation } from "react-type-animation";
+import { Separator } from "./ui/separator";
 
 const HeroSection = () => {
   return (
@@ -26,6 +27,7 @@ const HeroSection = () => {
           />
         </span>
       </h1>
+      <Separator className="my-4" />
       <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl text-center py-4">
         I am 28 year old with 4+ years of front web development. Currently
         building {""}
