@@ -1,6 +1,7 @@
+"use client";
 import React, { ReactNode } from "react";
 import StickyButton from "../ui/StickyButton";
-import { Button } from "../ui/button";
+
 import Link from "next/link";
 import {
   Tooltip,
@@ -8,6 +9,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { Button } from "../ui/button";
 
 interface TechnologyProps {
   name: string;
@@ -20,7 +22,7 @@ const Technology: React.FC<TechnologyProps> = ({ name, icon, link }) => {
     <StickyButton>
       <TooltipProvider delayDuration={50}>
         <Tooltip>
-          <TooltipTrigger>
+          <TooltipTrigger asChild>
             <Link href={link}>
               <Button variant="link" className="text-foreground">
                 {icon}
