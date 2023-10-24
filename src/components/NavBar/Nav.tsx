@@ -4,26 +4,25 @@ import { RiHomeHeartFill } from "react-icons/ri";
 import { GiClown } from "react-icons/gi";
 import { SiMinutemailer } from "react-icons/si";
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
-import { Separator } from "./ui/separator";
-import { ModeToggle } from "./ui/toggle-mode";
+import { Separator } from "../ui/separator";
+import { ModeToggle } from "../ui/toggle-mode";
 
 const Nav = () => {
   const pathname = usePathname();
   const buttons = [
     { path: "/", icon: <RiHomeHeartFill /> },
-    { path: "/troll", icon: <GiClown /> },
     { path: "/#contact-me", icon: <SiMinutemailer /> },
   ];
 
   return (
-    <div className="flex items-center justify-center py-7 space-x-3 ">
+    <div className="fixed top-0 z-10 flex justify-center w-full py-5 space-x-2 backdrop-filter backdrop-blur-2xl">
       {buttons.map(({ path, icon }) => (
         <Link key={path} href={path}>
           <Button
             variant="link"
-            className={`text-xl px-2 ${
+            className={`text-md px-2 ${
               pathname === path ? "text-primary" : " text-gray-600"
             }`}
           >
@@ -42,10 +41,9 @@ const Nav = () => {
           </Button>
         </Link>
       ))}
-      <Separator
-        orientation="vertical"
-        className="h-3 min-h-full bg-primary mx-1"
-      />
+      <div className="flex items-center">
+        <Separator orientation="vertical" className="h-3 bg-primary mx-1" />
+      </div>
       <ModeToggle />
     </div>
   );

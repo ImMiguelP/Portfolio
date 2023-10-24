@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { use } from "react";
+import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { Separator } from "./ui/separator";
 
