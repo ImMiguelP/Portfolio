@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import Projects from "@/components/ProjectsInfo/Projects";
 import Technologies from "@/components/Technologies/Technologies";
 
 export default function Home() {
@@ -9,6 +10,10 @@ export default function Home() {
         Tech I Use
       </header>
       <Technologies />
+      <header className="text-2xl font-bold text-center p-24">
+        Web Projects
+      </header>
+      <Projects />
     </main>
   );
 }
