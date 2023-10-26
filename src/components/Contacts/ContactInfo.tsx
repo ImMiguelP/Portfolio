@@ -6,7 +6,7 @@ import {
   TooltipTrigger,
 } from "../ui/tooltip";
 import { Button } from "../ui/button";
-import { useHoverOpacity, useZoom } from "@/hooks/useStyling";
+import { useZoom } from "@/hooks/useStyling";
 
 interface ContactInfoProps {
   name: string;
