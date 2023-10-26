@@ -29,13 +29,13 @@ const Nav = () => {
             <span
               className={`group relative inline-flex items-center py-2 ${
                 pathname === path
-                  ? "hover:text-blue-500"
-                  : "group-hover:text-blue-500"
+                  ? "hover:text-blue-primary"
+                  : "group-hover:text-primary"
               }`}
             >
               {icon}
               <span
-                className={`absolute w-full h-0.5 bottom-0 left-0 bg-blue-500 transition-transform duration-300 scale-x-0 group-hover:scale-x-100`}
+                className={`absolute w-full h-0.5 bottom-0 left-0 bg-primary transition-transform duration-300 scale-x-0 group-hover:scale-x-100`}
               ></span>
             </span>
           </Button>

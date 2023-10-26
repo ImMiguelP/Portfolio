@@ -1,5 +1,3 @@
-"use client";
-
 import * as React from "react";
 import { FaMoon, FaSun } from "react-icons/fa6";
 import { useTheme } from "next-themes";
@@ -18,10 +16,13 @@ export function ModeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="link" className="text-foreground">
+        <Button variant="link" className="text-foreground relative group ">
           <FaSun className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
           <FaMoon className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           <span className="sr-only">Toggle theme</span>
+          <span
+            className={`absolute w-full h-0.5 bottom-0 left-0 bg-primary transition-transform duration-300 scale-x-0 group-hover:scale-x-100`}
+          />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
