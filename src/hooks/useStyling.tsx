@@ -20,7 +20,7 @@ export const useHoverOpacity = () => {
   };
 };
 
-export const useImageHoverEffect = () => {
+export const useZoom = () => {
   const [hovered, setHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -31,30 +31,15 @@ export const useImageHoverEffect = () => {
     setHovered(false);
   };
 
-  const imageStyle = {
+  const hoverStyle = {
     transition: "all 0.3s ease-in-out",
     transform: hovered ? "scale(1.15)" : "scale(1.0)",
   };
 
   return {
     hovered,
-    imageStyle,
+    hoverStyle,
     handleMouseEnter,
     handleMouseLeave,
   };
-};
-
-export const useZoom = () => {
-  const isMobile = useIsMobile();
-  const zoomEffect = {
-    style: {
-      transition: "transform 0.3s ease-in-out",
-    },
-    hover: {
-      backgroundColor: "transparent",
-      transform: "scale(1.1) scale(1.15)",
-    },
-  };
-
-  return zoomEffect;
 };

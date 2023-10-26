@@ -6,7 +6,7 @@ import StickyButton from "../ui/StickyButton";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
-import { useImageHoverEffect, useZoom } from "@/hooks/useStyling";
+import { useZoom } from "@/hooks/useStyling";
 
 interface ProjectProps {
   name: string;
@@ -27,8 +27,7 @@ const Project: React.FC<ProjectProps> = ({
   tech,
   title,
 }) => {
-  const { hovered, imageStyle, handleMouseEnter, handleMouseLeave } =
-    useImageHoverEffect();
+  const { hovered, hoverStyle, handleMouseEnter, handleMouseLeave } = useZoom();
 
   return (
     <main className="flex flex-col bg-card h-[700px] w-[512px]  border-solid border-2 rounded-lg overflow-hidden pb-5 justify-between">
@@ -39,7 +38,7 @@ const Project: React.FC<ProjectProps> = ({
         src={images as string}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        style={imageStyle}
+        style={hoverStyle}
       />
       <div className="flex p-6">
         <div className="flex flex-row align-baseline">
