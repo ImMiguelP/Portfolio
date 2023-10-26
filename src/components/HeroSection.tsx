@@ -30,7 +30,7 @@ const HeroSection = () => {
       <Separator className="my-4" />
       <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl text-center py-4">
         I am 28 year old with 4+ years of front web development. Currently
-        building {""}
+        helping build {""}
         <span className="text-blue-500 underline ">
           <Link href="https://musy.one">musy</Link>
         </span>
