@@ -1,10 +1,12 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { Badge } from "../ui/badge";
 import StickyButton from "../ui/StickyButton";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
+import { useImageHoverEffect, useZoom } from "@/hooks/useStyling";
 
 interface ProjectProps {
   name: string;
@@ -25,9 +27,20 @@ const Project: React.FC<ProjectProps> = ({
   tech,
   title,
 }) => {
+  const { hovered, imageStyle, handleMouseEnter, handleMouseLeave } =
+    useImageHoverEffect();
+
   return (
-    <main className="flex flex-col bg-card h-[700px] w-[512px] max-w-[512px] border-solid border-2 rounded-lg overflow-hidden pb-5 justify-between">
-      <Image alt="" width={600} height={500} src={images as string} />
+    <main className="flex flex-col bg-card h-[700px] w-[512px]  border-solid border-2 rounded-lg overflow-hidden pb-5 justify-between">
+      <Image
+        alt=""
+        width={600}
+        height={500}
+        src={images as string}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={imageStyle}
+      />
       <div className="flex p-6">
         <div className="flex flex-row align-baseline">
           <header className="text-base font-bold">{title}</header>
@@ -40,11 +53,11 @@ const Project: React.FC<ProjectProps> = ({
       >
         {desc}
       </h4>
-      <div className="grid grid-cols-3 md:grid-cols-4 gap-4 p-5  text-center">
+      <div className="grid grid-cols-3 gap-4 lg:grid-cols-4 p-5  text-center">
         {Array.isArray(tech) ? (
           tech.map((item, index) => (
             <StickyButton key={index}>
-              <Badge className="bg-transparent text-primary h-[45px] w-[100px] justify-center rounded-sm outline hover:bg-transparent cursor-pointer">
+              <Badge className="bg-transparent text-primary h-[45px] w-[80px] justify-center rounded-sm outline hover:bg-transparent cursor-pointer">
                 {item}
               </Badge>
             </StickyButton>
