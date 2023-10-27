@@ -8,6 +8,8 @@ import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
 import { Separator } from "../ui/separator";
 import { ModeToggle } from "../ui/toggle-mode";
+import { socialInfo } from "../Socials/SocialsObj";
+import Socials from "../Socials/Socials";
 
 const Nav = () => {
   const pathname = usePathname();
@@ -23,7 +25,7 @@ const Nav = () => {
           <Button
             variant="link"
             className={`text-md px-2 ${
-              pathname === path ? "text-primary" : " text-gray-600"
+              pathname === path ? "text-primary" : "text-foreground"
             }`}
           >
             <span
@@ -34,13 +36,15 @@ const Nav = () => {
               }`}
             >
               {icon}
-              <span
-                className={`absolute w-full h-0.5 bottom-0 left-0 bg-primary transition-transform duration-300 scale-x-0 group-hover:scale-x-100`}
-              ></span>
+              <span className="absolute w-full h-0.5 bottom-0 left-0 bg-primary transition-transform duration-300 scale-x-0 group-hover:scale-x-100"></span>
             </span>
           </Button>
         </Link>
       ))}
+      <div className="flex items-center">
+        <Separator orientation="vertical" className="h-3 bg-primary mx-1" />
+      </div>
+      <Socials />
       <div className="flex items-center">
         <Separator orientation="vertical" className="h-3 bg-primary mx-1" />
       </div>
