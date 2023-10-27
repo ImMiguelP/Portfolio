@@ -33,7 +33,7 @@ export const useZoom = () => {
 
   const hoverStyle = {
     transition: "all 0.3s ease-in-out",
-    transform: hovered ? "scale(1.15)" : "scale(1.0)",
+    transform: hovered ? "scale(1.05)" : "scale(1.0)",
   };
 
   return {
