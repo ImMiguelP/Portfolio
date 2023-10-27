@@ -69,7 +69,7 @@ const Project: React.FC<ProjectProps> = ({
         )}
       </div>
       {/* <header className="text-xs font-thin px-6">Created Using</header> */}
-      <div className="grid grid-cols-10 gap-4 p-5  text-center">
+      <div className="flex gap-4 px-6 items-center">
         {Array.isArray(tech) ? (
           tech.map((item, index) => <>{item}</>)
         ) : (

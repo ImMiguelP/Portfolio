@@ -76,7 +76,7 @@ export const projects = [
     images: "/images/projects/port1.png",
     task: ["Web Design", "Front End Development", "UI/UX Design"],
     tech: [
-      <TbBrandNextjs key="" size="18px" />,
+      <TbBrandNextjs key="" size="26px" />,
       <SiTypescript key="" size="18px" />,
       <SiTailwindcss key="" size="18px" />,
     ],
