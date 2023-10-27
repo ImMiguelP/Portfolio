@@ -42,9 +42,10 @@ const Project: React.FC<ProjectProps> = ({
         onMouseLeave={handleMouseLeave}
         style={hoverStyle}
       />
+
       <div className="flex p-6">
         <div className="flex flex-row align-baseline">
-          <header className="text-base font-bold">{title}</header>
+          <header className="text-base font-bold">{name}</header>
           <Badge className="bg-primary ml-2 rounded-sm">{title}</Badge>
         </div>
       </div>
