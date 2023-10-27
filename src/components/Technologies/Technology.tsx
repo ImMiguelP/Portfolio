@@ -8,7 +8,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "../ui/tooltip";
 import { Button } from "../ui/button";
 
 interface TechnologyProps {
