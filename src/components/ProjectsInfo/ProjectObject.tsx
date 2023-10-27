@@ -1,3 +1,16 @@
+import {
+  SiChakraui,
+  SiSupabase,
+  SiRemix,
+  SiFirebase,
+  SiJavascript,
+  SiTypescript,
+  SiTailwindcss,
+  SiReact,
+  SiPrisma,
+} from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+
 export const projects = [
   {
     name: "InReach",
@@ -5,12 +18,11 @@ export const projects = [
     desc: "Empower your influencer marketing campaigns with real-time social media metrics. Creators can effortlessly track their reach, engagement, and performance directly from social media platforms as their campaigns unfold. Unlock data-driven insights and optimize your marketing strategy with InReach, the ultimate solution for influencers and marketers alike.",
     link: "https://www.inreach.gg/",
     images: "/images/projects/inreach.png",
+    task: ["Web Design", "Front End Development", "UI/UX Design"],
     tech: [
-      "Web Design",
-      "Front End Development",
-      "UI/UX Design",
-      "TypeScript",
-      "Tailwind",
+      <SiReact key="" size="18px" />,
+      <SiTypescript key="" size="18px" />,
+      <SiTailwindcss key="" size="18px" />,
     ],
   },
   {
@@ -20,12 +32,11 @@ export const projects = [
     link: "https://ethereum.org/en/",
     git: "https://github.com/ImMiguelP/ethereum-org-website",
     images: "/images/projects/eth1.png",
+    task: ["Web Design", "Front End Development", "UI/UX Design"],
     tech: [
-      "Web Design",
-      "Front End Development",
-      "UI/UX Design",
-      "TypeScript",
-      "Chakra-UI",
+      <SiReact key="" size="18px" />,
+      <SiTypescript key="" size="18px" />,
+      <SiChakraui key="" size="18px" />,
     ],
   },
   {
@@ -35,14 +46,12 @@ export const projects = [
     link: "https://musy.one/",
     git: "https://github.com/laurentlucian/musy",
     images: "/images/projects/musy2.png",
+    task: ["Web Design", "Front End Development", "UI/UX Design"],
     tech: [
-      "Web Design",
-      "Front End Development",
-      "UI/UX Design",
-      "Remix",
-      "TypeScript",
-      "Chakra-UI",
-      "Prisma",
+      <SiRemix key="" size="18px" />,
+      <SiTypescript key="" size="18px" />,
+      <SiChakraui key="" size="18px" />,
+      <SiPrisma key="" size="18px" />,
     ],
   },
   {
@@ -51,14 +60,12 @@ export const projects = [
     title: "Creator",
     git: "https://github.com/ImMiguelP/instagram-clone",
     images: "/images/projects/ig1.png",
+    task: ["Web Design", "Front End Development", "UI/UX Design"],
     tech: [
-      "Web Design",
-      "Front End Development",
-      "UI/UX Design",
-      "React",
-      "JavaScript",
-      "Chakra-UI",
-      "Supabase",
+      <SiReact key="" size="18px" />,
+      <SiJavascript key="" size="18px" />,
+      <SiChakraui key="" size="18px" />,
+      <SiSupabase key="" size="18px" />,
     ],
   },
   {
@@ -67,13 +74,11 @@ export const projects = [
     desc: "A showcase of my journey as a front-end web developer. Explore a collection of projects I've created, each highlighting my skills and passion for web development. Discover the technologies I've mastered, from JavaScript and TypeScript to React and more. Get inspired and see what's possible in the world of web development through my work.",
     git: "https://github.com/ImMiguelP/Port",
     images: "/images/projects/port1.png",
+    task: ["Web Design", "Front End Development", "UI/UX Design"],
     tech: [
-      "Web Design",
-      "Front End Development",
-      "UI/UX Design",
-      "Next.JS",
-      "TypeScript",
-      "Chakra-UI",
+      <TbBrandNextjs key="" size="18px" />,
+      <SiTypescript key="" size="18px" />,
+      <SiTailwindcss key="" size="18px" />,
     ],
   },
 ];

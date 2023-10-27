@@ -15,7 +15,8 @@ interface ProjectProps {
   link?: string;
   git?: string;
   images?: string;
-  tech: string | string[];
+  task: string | string[];
+  tech?: React.ReactNode[];
 }
 
 const Project: React.FC<ProjectProps> = ({
@@ -24,10 +25,11 @@ const Project: React.FC<ProjectProps> = ({
   link,
   git,
   images,
-  tech,
+  task,
   title,
+  tech,
 }) => {
-  const { hovered, hoverStyle, handleMouseEnter, handleMouseLeave } = useZoom();
+  const { hoverStyle, handleMouseEnter, handleMouseLeave } = useZoom();
 
   return (
     <main className="flex flex-col bg-card h-[700px] w-[512px]  border-solid border-2 rounded-lg overflow-hidden pb-5 justify-between">
@@ -53,14 +55,22 @@ const Project: React.FC<ProjectProps> = ({
         {desc}
       </h4>
       <div className="grid grid-cols-3 gap-4 lg:grid-cols-4 p-5  text-center">
-        {Array.isArray(tech) ? (
-          tech.map((item, index) => (
+        {Array.isArray(task) ? (
+          task.map((item, index) => (
             <StickyButton key={index}>
               <Badge className="bg-transparent text-primary h-[45px] w-[80px] justify-center rounded-sm outline hover:bg-transparent cursor-pointer">
                 {item}
               </Badge>
             </StickyButton>
           ))
+        ) : (
+          <Badge>{task}</Badge>
+        )}
+      </div>
+      {/* <header className="text-xs font-thin px-6">Created Using</header> */}
+      <div className="grid grid-cols-10 gap-4 p-5  text-center">
+        {Array.isArray(tech) ? (
+          tech.map((item, index) => <>{item}</>)
         ) : (
           <Badge>{tech}</Badge>
         )}

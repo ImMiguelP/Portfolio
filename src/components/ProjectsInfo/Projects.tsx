@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import { projects } from "./ProjectObject";
 import Project from "./Project";
 import { useHoverOpacity } from "@/hooks/useStyling";
+import { projects } from "./ProjectObject";
 
 const Projects = () => {
   const { hoveredIndex, handleMouseEnter, handleMouseLeave } =
