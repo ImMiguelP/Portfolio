@@ -18,11 +18,11 @@ const Contact: React.FC<ContactInfoProps> = ({ name, icon, link, email }) => {
   return (
     <div
       onClick={handleButtonClick}
-      className="flex flex-row items-center rounded-2xl bg-secondary p-10 w-[200px] justify-center hover:cursor-pointer"
+      className="flex flex-row items-center rounded-2xl bg-secondary p-10 w-[400px]  hover:cursor-pointer"
     >
-      <div className="text-secondary-foreground">{icon}</div>
+      <div className="text-secondary-foreground ">{icon}</div>
 
-      <p className="text-sm font-semibold text-primary mx-3">{name}</p>
+      <p className="text-lg font-semibold text-primary mx-5">{name}</p>
     </div>
   );
 };
