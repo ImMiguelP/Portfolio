@@ -15,7 +15,7 @@ const Nav = () => {
   const pathname = usePathname();
   const buttons = [
     { path: "/", icon: <RiHomeHeartFill /> },
-    // { path: "/contact-me", icon: <SiMinutemailer /> },
+    { path: "/contact-me", icon: <SiMinutemailer /> },
   ];
 
   return (
