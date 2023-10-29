@@ -1,14 +1,12 @@
 "use client";
 import React from "react";
 import { RiHomeHeartFill } from "react-icons/ri";
-import { GiClown } from "react-icons/gi";
 import { SiMinutemailer } from "react-icons/si";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
 import { Separator } from "../ui/separator";
 import { ModeToggle } from "../ui/toggle-mode";
-import { socialInfo } from "../Socials/SocialsObj";
 import Socials from "../Socials/Socials";
 
 const Nav = () => {

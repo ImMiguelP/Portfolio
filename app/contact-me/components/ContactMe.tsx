@@ -1,7 +1,7 @@
-import { contactinfo } from "@/components/Contacts/ContactObj";
 import React from "react";
 import Contact from "./Contact";
 import { useHoverOpacity } from "@/hooks/useStyling";
+import { contactinfo } from "./ContactObj";
 
 const ContactMe = () => {
   const { hoveredIndex, handleMouseEnter, handleMouseLeave } =
