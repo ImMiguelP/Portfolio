@@ -60,12 +60,36 @@ export const projects = [
     title: "Creator",
     git: "https://github.com/ImMiguelP/instagram-clone",
     images: "/images/projects/ig1.png",
-    task: ["Web Design", "Front End Development", "UI/UX Design"],
+    task: [
+      "Web Design",
+      "Front End Development",
+      "UI/UX Design",
+      "Back End Development",
+    ],
     tech: [
       <SiReact key="" size="18px" />,
       <SiJavascript key="" size="18px" />,
       <SiChakraui key="" size="18px" />,
       <SiSupabase key="" size="18px" />,
+    ],
+  },
+  {
+    name: "Crunchyroll Clone",
+    desc: "A faithful Instagram replica, designed for educational purposes. Snap, post, and connect just like on Instagram. Share your world with photos and stories, engage with friends through likes and comments, and explore trending content. It's Instagram, recreated for you.",
+    title: "Creator",
+    git: "https://github.com/ImMiguelP/crunchyroll-clone",
+    images: "/images/projects/CR1.png",
+    task: [
+      "Web Design",
+      "Front End Development",
+      "UI/UX Design",
+      "Back End Development",
+    ],
+    tech: [
+      <TbBrandNextjs key="" size="26px" />,
+      <SiTypescript key="" size="18px" />,
+      <SiChakraui key="" size="18px" />,
+      <SiFirebase key="" size="18px" />,
     ],
   },
   {
