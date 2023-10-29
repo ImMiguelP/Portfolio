@@ -1,4 +1,3 @@
-import Contact from "@/components/Contacts/Contact";
 import HeroSection from "@/components/HeroSection";
 import Projects from "@/components/ProjectsInfo/Projects";
 import Technologies from "@/components/Technologies/Technologies";
@@ -15,10 +14,6 @@ export default function Home() {
         Web Projects
       </header>
       <Projects />
-      <header className="text-2xl font-bold text-center p-24">
-        Get In Touch
-      </header>
-      <Contact />
     </main>
   );
 }
