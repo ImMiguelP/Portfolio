@@ -1,3 +1,4 @@
+import { type } from "os";
 import {
   SiChakraui,
   SiSupabase,
@@ -11,6 +12,17 @@ import {
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 
+const react = <SiReact key="" size="16px" />;
+const nextjs = <TbBrandNextjs key="" size="22px" />;
+const remix = <SiRemix key="" size="16px" />;
+const javascript = <SiJavascript key="" size="16px" />;
+const typescript = <SiTypescript key="" size="16px" />;
+const chakra = <SiChakraui key="" size="16px" />;
+const tailwind = <SiTailwindcss key="" size="16px" />;
+const supabase = <SiSupabase key="" size="16px" />;
+const firebase = <SiFirebase key="" size="16px" />;
+const prisma = <SiPrisma key="" size="16px" />;
+
 export const projects = [
   {
     name: "InReach",
@@ -19,11 +31,7 @@ export const projects = [
     link: "https://www.inreach.gg/",
     images: "/images/projects/inreach.png",
     task: ["Web Design", "Front End Development", "UI/UX Design"],
-    tech: [
-      <SiReact key="" size="18px" />,
-      <SiTypescript key="" size="18px" />,
-      <SiTailwindcss key="" size="18px" />,
-    ],
+    tech: [react, typescript, tailwind],
   },
   {
     name: "Ethereum",
@@ -33,11 +41,7 @@ export const projects = [
     git: "https://github.com/ImMiguelP/ethereum-org-website",
     images: "/images/projects/eth1.png",
     task: ["Web Design", "Front End Development", "UI/UX Design"],
-    tech: [
-      <SiReact key="" size="18px" />,
-      <SiTypescript key="" size="18px" />,
-      <SiChakraui key="" size="18px" />,
-    ],
+    tech: [react, typescript, chakra],
   },
   {
     name: "Musy",
@@ -47,12 +51,7 @@ export const projects = [
     git: "https://github.com/laurentlucian/musy",
     images: "/images/projects/musy2.png",
     task: ["Web Design", "Front End Development", "UI/UX Design"],
-    tech: [
-      <SiRemix key="" size="18px" />,
-      <SiTypescript key="" size="18px" />,
-      <SiChakraui key="" size="18px" />,
-      <SiPrisma key="" size="18px" />,
-    ],
+    tech: [remix, typescript, chakra, prisma],
   },
   {
     name: "Instagram Clone",
@@ -66,12 +65,7 @@ export const projects = [
       "UI/UX Design",
       "Back End Development",
     ],
-    tech: [
-      <SiReact key="" size="18px" />,
-      <SiJavascript key="" size="18px" />,
-      <SiChakraui key="" size="18px" />,
-      <SiSupabase key="" size="18px" />,
-    ],
+    tech: [react, javascript, chakra, supabase],
   },
   {
     name: "Crunchyroll Clone",
@@ -85,12 +79,7 @@ export const projects = [
       "UI/UX Design",
       "Back End Development",
     ],
-    tech: [
-      <TbBrandNextjs key="" size="26px" />,
-      <SiTypescript key="" size="18px" />,
-      <SiChakraui key="" size="18px" />,
-      <SiFirebase key="" size="18px" />,
-    ],
+    tech: [nextjs, typescript, chakra, firebase],
   },
   {
     name: "Portfolio",
@@ -99,10 +88,6 @@ export const projects = [
     git: "https://github.com/ImMiguelP/Port",
     images: "/images/projects/port1.png",
     task: ["Web Design", "Front End Development", "UI/UX Design"],
-    tech: [
-      <TbBrandNextjs key="" size="26px" />,
-      <SiTypescript key="" size="18px" />,
-      <SiTailwindcss key="" size="18px" />,
-    ],
+    tech: [nextjs, typescript, tailwind],
   },
 ];
