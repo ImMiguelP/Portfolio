@@ -25,15 +25,27 @@ export function ModeToggle() {
           />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
+      <DropdownMenuContent>
+        <DropdownMenuItem className="text-xs" onClick={() => setTheme("light")}>
+          <div className="flex flex-row group relative items-center gap-1 w-[100%] py-1 text-xs">
+            Light
+            <span className="absolute w-full h-0.5 bottom-0 left-0 bg-primary transition-transform duration-300 scale-x-0 group-hover:scale-x-100"></span>
+          </div>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
+        <DropdownMenuItem className="text-xs" onClick={() => setTheme("dark")}>
+          <div className="flex flex-row group relative items-center gap-1 w-[100%] py-1 text-xs">
+            Dark
+            <span className="absolute w-full h-0.5 bottom-0 left-0 bg-primary transition-transform duration-300 scale-x-0 group-hover:scale-x-100"></span>
+          </div>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
+        <DropdownMenuItem
+          className="text-xs"
+          onClick={() => setTheme("system")}
+        >
+          <div className="flex flex-row group relative text-center gap-1 w-[100%] py-1 text-xs">
+            System
+            <span className="absolute w-full h-0.5 bottom-0 left-0 bg-primary transition-transform duration-300 scale-x-0 group-hover:scale-x-100"></span>
+          </div>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

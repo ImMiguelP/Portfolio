@@ -16,11 +16,11 @@ export const socialInfo = [
     icon: <FaLinkedin />,
     link: "https://www.linkedin.com/in/miguelpedreguera/",
   },
-  {
-    name: "Insta",
-    icon: <FaInstagram />,
-    link: "https://www.instagram.com/immiguelp/",
-  },
+  // {
+  //   name: "Instagram",
+  //   icon: <FaInstagram />,
+  //   link: "https://www.instagram.com/immiguelp/",
+  // },
   //   {
   //     name: "XTwitter",
   //     icon: <FaXTwitter  />,
