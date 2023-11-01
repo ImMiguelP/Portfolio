@@ -8,7 +8,7 @@ const Projects = () => {
   const { hoveredIndex, handleMouseEnter, handleMouseLeave } =
     useHoverOpacity();
   return (
-    <div className="grid grid-cols-1 gap-5 md:grid-cols-2 justify-center max-w-screen-xl mx-auto">
+    <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3 justify-center max-w-screen-xl mx-auto">
       {projects.map((project, index) => (
         <div
           key={index}
