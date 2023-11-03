@@ -16,7 +16,7 @@ const HeroSection = () => {
               1000,
               "A Software Engineer",
               1000,
-              "A Ui/Ux Designer",
+              "A UI/UX Designer",
               1000,
             ]}
             wrapper="span"
@@ -27,7 +27,7 @@ const HeroSection = () => {
       </h1>
       <Separator className="my-4" />
       <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl text-center py-4">
-        I am 28 year old with 4+ years of front web development. Currently
+        I am 28 years old with 4+ years of front web development. Currently
         helping build {""}
         <span className="text-blue-500 underline ">
           <Link href="https://musy.one">musy</Link>
