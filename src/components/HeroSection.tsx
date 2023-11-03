@@ -9,7 +9,7 @@ const HeroSection = () => {
     <section className="py-24 flex flex-col items-center justify-center">
       <h1 className="text-4xl font-bold text-center">
         Hello, I&apos;m Miguel <br></br>
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-orange-300 ">
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-third">
           <TypeAnimation
             sequence={[
               "A Web Developer",
