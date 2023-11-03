@@ -5,10 +5,11 @@ import { Badge } from "../ui/badge";
 import StickyButton from "../ui/StickyButton";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { Separator } from "../ui/separator";
 import { useZoom } from "@/hooks/useStyling";
 import { Dialog, Transition } from "@headlessui/react";
 import { IoMdClose } from "react-icons/io";
+import { FaGithub } from "react-icons/fa6";
+import { BiWorld } from "react-icons/bi";
 
 interface ProjectProps {
   name: string;
@@ -51,6 +52,7 @@ const Project: React.FC<ProjectProps> = ({
           style={{ cursor: "pointer", objectFit: "cover", ...hoverStyle }}
         />
       </div>
+
       {/* Modal */}
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={toggleModal}>
@@ -131,10 +133,11 @@ const Project: React.FC<ProjectProps> = ({
                       <Link href={link}>
                         <Button
                           variant="link"
-                          className="text-secondary-foreground hover:text-primary"
+                          className="text-secondary-foreground hover:scale-105 duration-200 hover:text-primary"
                           size="sm"
                         >
-                          {link}
+                          <BiWorld className="w-12 text-lg" />
+                          Website
                         </Button>
                       </Link>
                     )}
@@ -142,9 +145,10 @@ const Project: React.FC<ProjectProps> = ({
                       <Link href={git}>
                         <Button
                           variant="link"
+                          className="text-secondary-foreground hover:scale-105 duration-200 hover:text-primary"
                           size="sm"
-                          className="text-secondary-foreground hover:text-primary"
                         >
+                          <FaGithub className="w-12 text-lg" />
                           GitHub
                         </Button>
                       </Link>
