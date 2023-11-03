@@ -9,7 +9,6 @@ const Nav = () => {
     <nav>
       <BrowserNav />
       <MobileNav />
-      <Separator className="bg-green-300 fixed" />
     </nav>
   );
 };
