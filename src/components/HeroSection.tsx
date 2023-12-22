@@ -29,7 +29,11 @@ const HeroSection = () => {
       <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl text-center py-4">
         I am 28 years old with 4+ years of front web development. Currently
         helping build {""}
-        <span className="text-blue-500 underline ">
+        <span className="text-primary/70 underline hover:text-primary">
+          <Link href=" https://supp.money/">Supp</Link>
+        </span>
+        {""} and {""}
+        <span className="text-primary/70 underline hover:text-primary">
           <Link href="https://musy.one">musy</Link>
         </span>
       </p>
