@@ -53,6 +53,15 @@ export const projects = [
     tech: [remix, typescript, chakra, prisma],
   },
   {
+    name: "Supp",
+    title: "Contributor",
+    desc: "",
+    link: "https://supp.money/",
+    images: "/images/projects/supp1.png",
+    task: ["Web Design", "Front End Development", "UI/UX Design"],
+    tech: [react, typescript, tailwind],
+  },
+  {
     name: "Instagram Clone",
     desc: "A faithful Instagram replica, designed for educational purposes. Snap, post, and connect just like on Instagram. Share your world with photos and stories, engage with friends through likes and comments, and explore trending content. It's Instagram, recreated for you.",
     title: "Creator",
