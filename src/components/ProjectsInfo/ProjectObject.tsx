@@ -67,7 +67,7 @@ export const projects = [
     title: "Creator",
     desc: "",
     link: "https://supp.money/",
-    images: "/images/projects/supp1.png",
+    images: "/images/projects/temp-supp.png",
     task: ["Web Design", "Front End Development", "UI/UX Design"],
     tech: [react, typescript, nextjs, tailwind],
   },
