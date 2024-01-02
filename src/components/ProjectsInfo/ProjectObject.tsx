@@ -53,13 +53,23 @@ export const projects = [
     tech: [remix, typescript, chakra, prisma],
   },
   {
-    name: "Supp",
+    name: "Suppmoney App",
     title: "Contributor",
     desc: "",
     link: "https://supp.money/",
     images: "/images/projects/supp1.png",
-    task: ["Web Design", "Front End Development", "UI/UX Design"],
+    task: ["App Design", "Front End Development", "UI/UX Design"],
     tech: [react, typescript, tailwind],
+  },
+
+  {
+    name: "Suppmoney Website",
+    title: "Creator",
+    desc: "",
+    link: "https://supp.money/",
+    images: "/images/projects/supp1.png",
+    task: ["Web Design", "Front End Development", "UI/UX Design"],
+    tech: [react, typescript, nextjs, tailwind],
   },
   {
     name: "Instagram Clone",
