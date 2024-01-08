@@ -7,7 +7,7 @@ import { Separator } from "./ui/separator";
 const HeroSection = () => {
   return (
     <section className="py-24 flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold text-center">
+      <h1 className="text-6xl font-bold text-center tracking-tight">
         Hello, I&apos;m Miguel <br></br>
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-third">
           <TypeAnimation
@@ -26,7 +26,7 @@ const HeroSection = () => {
         </span>
       </h1>
       <Separator className="my-4" />
-      <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl text-center py-4">
+      <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-2xl text-center py-4">
         I am 28 years old with 4+ years of front web development. Currently
         helping build {""}
         <span className="text-primary/70 underline hover:text-primary">
