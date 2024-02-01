@@ -94,7 +94,11 @@ const Memory = () => {
           return (
             <div key={card.id}>
               {flipped ? (
-                <button className="text-center w-32 h-32 border border-black rounded bg-neutral-800">
+                <button
+                  className={`text-center w-32 h-32 border border-black rounded ${
+                    card.matched ? "bg-green-600/40" : "bg-neutral-700"
+                  }`}
+                >
                   {card.kind === "string" ? (
                     card.value
                   ) : (
