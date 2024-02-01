@@ -26,6 +26,7 @@ const Memory = () => {
   const [cards, setCards] = useState<CARD[]>([]);
   const [firstCard, setFirstCard] = useState<CARD | null>(null);
   const [secondCard, setSecondCard] = useState<CARD | null>(null);
+  const [disabled, setDisabled] = useState<boolean>(false);
 
   const shuffleCards = () => {
     const shuffledCards = cardsInfo
@@ -35,11 +36,18 @@ const Memory = () => {
   };
 
   const handleCardClick = (card: CARD) => {
-    firstCard ? setSecondCard(card) : setFirstCard(card);
+    if (!disabled) {
+      firstCard ? setSecondCard(card) : setFirstCard(card);
+    }
   };
 
   useEffect(() => {
+    shuffleCards();
+  }, []);
+
+  useEffect(() => {
     if (firstCard && secondCard) {
+      setDisabled(true);
       if (
         firstCard.value.toLocaleLowerCase() ===
         secondCard.value.toLocaleLowerCase()
@@ -68,6 +76,7 @@ const Memory = () => {
   const resetTurn = () => {
     setFirstCard(null);
     setSecondCard(null);
+    setDisabled(false);
   };
 
   return (
