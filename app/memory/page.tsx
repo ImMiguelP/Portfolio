@@ -1,7 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import React, { useEffect, useState } from "react";
-import { set } from "sanity";
 
 type CARD = {
   kind: string;
@@ -20,7 +19,6 @@ const cardSets: CardSet[] = [
     { kind: "image", value: "bee", matched: false },
     { kind: "string", value: "Bee", matched: false },
   ],
-  // Add more sets as needed
 ];
 
 const Memory = () => {
