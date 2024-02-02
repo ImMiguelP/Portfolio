@@ -72,7 +72,6 @@ const Memory = () => {
             }
           });
         });
-
         resetTurn();
       } else {
         setWrong(true);
@@ -80,8 +79,6 @@ const Memory = () => {
       }
     }
   }, [firstCard, secondCard]);
-
-  console.log(cards);
 
   const resetTurn = () => {
     setFirstCard(null);
@@ -95,7 +92,7 @@ const Memory = () => {
   };
 
   return (
-    <main className="flex flex-col items-center p-24">
+    <main className="flex flex-col items-center pt-24">
       <text className="text-2xl font-bold text-center pb-5">
         Synthesis Match
       </text>
