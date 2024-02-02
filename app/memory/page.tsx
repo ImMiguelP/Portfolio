@@ -28,6 +28,7 @@ const Memory = () => {
   const [secondCard, setSecondCard] = useState<CARD | null>(null);
   const [disabled, setDisabled] = useState<boolean>(false);
   const [wrong, setWrong] = useState<boolean>(false);
+  const [reveal, setReveal] = useState<boolean>(false);
 
   const shuffleCards = () => {
     const shuffledCards = cardsInfo
@@ -83,21 +84,30 @@ const Memory = () => {
     setWrong(false);
   };
 
+  const revealButton = () => {
+    reveal ? setReveal(false) : setReveal(true);
+  };
+
   return (
     <main className="flex flex-col items-center p-24">
       <text className="text-2xl font-bold text-center pb-5">
         Synthesis Match
       </text>
-      <Button className="mb-10" onClick={shuffleCards}>
-        Shuffle Cards
-      </Button>
+      <div className="flex gap-4">
+        <Button className="mb-10" onClick={shuffleCards}>
+          Shuffle Cards
+        </Button>
+        <Button className="mb-10" onClick={revealButton}>
+          {reveal ? "Hide Cards" : "Reveal all cards"}
+        </Button>
+      </div>
       <div className="grid grid-cols-2 gap-6">
         {cards.map((card) => {
           const flipped =
             card === firstCard || card === secondCard || card.matched;
           return (
             <div key={card.id}>
-              {flipped ? (
+              {flipped || reveal ? (
                 <button
                   className={`text-center w-32 h-32 border border-black rounded ${
                     card.matched
