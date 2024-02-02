@@ -27,6 +27,7 @@ const Memory = () => {
   const [firstCard, setFirstCard] = useState<CARD | null>(null);
   const [secondCard, setSecondCard] = useState<CARD | null>(null);
   const [disabled, setDisabled] = useState<boolean>(false);
+  const [wrong, setWrong] = useState<boolean>(false);
 
   const shuffleCards = () => {
     const shuffledCards = cardsInfo
@@ -64,8 +65,10 @@ const Memory = () => {
             }
           });
         });
+
         resetTurn();
       } else {
+        setWrong(true);
         setTimeout(() => resetTurn(), 1000);
       }
     }
@@ -77,6 +80,7 @@ const Memory = () => {
     setFirstCard(null);
     setSecondCard(null);
     setDisabled(false);
+    setWrong(false);
   };
 
   return (
@@ -96,7 +100,11 @@ const Memory = () => {
               {flipped ? (
                 <button
                   className={`text-center w-32 h-32 border border-black rounded ${
-                    card.matched ? "bg-green-600/40" : "bg-neutral-700"
+                    card.matched
+                      ? "bg-green-600/40"
+                      : wrong
+                      ? " bg-red-600/40"
+                      : "bg-neutral-700"
                   }`}
                 >
                   {card.kind === "string" ? (
