@@ -6,20 +6,21 @@ import { set } from "sanity";
 type CARD = {
   kind: string;
   value: string;
-  id: number;
   matched: boolean;
 };
 
-const cardsInfo: CARD[] = [
-  {
-    kind: "string",
-    value: "Duck",
-    id: 0,
-    matched: false,
-  },
-  { kind: "image", value: "duck", id: 0, matched: false },
-  { kind: "image", value: "bee", id: 0, matched: false },
-  { kind: "string", value: "Bee", id: 0, matched: false },
+type CardSet = [CARD, CARD];
+
+const cardSets: CardSet[] = [
+  [
+    { kind: "string", value: "Duck", matched: false },
+    { kind: "image", value: "duck", matched: false },
+  ],
+  [
+    { kind: "image", value: "bee", matched: false },
+    { kind: "string", value: "Bee", matched: false },
+  ],
+  // Add more sets as needed
 ];
 
 const Memory = () => {
@@ -31,9 +32,16 @@ const Memory = () => {
   const [reveal, setReveal] = useState<boolean>(false);
 
   const shuffleCards = () => {
-    const shuffledCards = cardsInfo
-      .sort(() => Math.random() - 0.5)
-      .map((card) => ({ ...card, id: Math.random() }));
+    const shuffleFirstCol = cardSets
+      .map((set) => set[0])
+      .sort(() => Math.random() - 0.5);
+    const shuffleSecondCol = cardSets
+      .map((set) => set[1])
+      .sort(() => Math.random() - 0.5);
+    const shuffledCards: CARD[] = [];
+    for (let i = 0; i < cardSets.length; i++) {
+      shuffledCards.push(shuffleFirstCol[i], shuffleSecondCol[i]);
+    }
     setCards(shuffledCards);
   };
 
@@ -102,11 +110,11 @@ const Memory = () => {
         </Button>
       </div>
       <div className="grid grid-cols-2 gap-6">
-        {cards.map((card) => {
+        {cards.map((card, index) => {
           const flipped =
             card === firstCard || card === secondCard || card.matched;
           return (
-            <div key={card.id}>
+            <div key={index}>
               {flipped || reveal ? (
                 <button
                   className={`text-center w-32 h-32 border border-black rounded ${
