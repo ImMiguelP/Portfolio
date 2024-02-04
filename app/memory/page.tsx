@@ -1,25 +1,14 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import React, { useEffect, useState } from "react";
+import { cardImages } from "./components/cardImages";
+import Image, { StaticImageData } from "next/image";
 
 type CARD = {
-  kind: string;
-  value: string;
+  alt: string;
+  src: StaticImageData;
   matched: boolean;
 };
-
-type CardSet = [CARD, CARD];
-
-const cardSets: CardSet[] = [
-  [
-    { kind: "string", value: "Duck", matched: false },
-    { kind: "image", value: "duck", matched: false },
-  ],
-  [
-    { kind: "image", value: "bee", matched: false },
-    { kind: "string", value: "Bee", matched: false },
-  ],
-];
 
 const Memory = () => {
   const [cards, setCards] = useState<CARD[]>([]);
@@ -30,16 +19,10 @@ const Memory = () => {
   const [reveal, setReveal] = useState<boolean>(false);
 
   const shuffleCards = () => {
-    const shuffleFirstCol = cardSets
-      .map((set) => set[0])
-      .sort(() => Math.random() - 0.5);
-    const shuffleSecondCol = cardSets
-      .map((set) => set[1])
-      .sort(() => Math.random() - 0.5);
-    const shuffledCards: CARD[] = [];
-    for (let i = 0; i < cardSets.length; i++) {
-      shuffledCards.push(shuffleFirstCol[i], shuffleSecondCol[i]);
-    }
+    const shuffledCards: CARD[] = [...cardImages, ...cardImages]
+      .sort(() => Math.random() - 0.5)
+      .map((card) => ({ ...card, id: Math.random() }));
+
     setCards(shuffledCards);
   };
 
@@ -56,16 +39,10 @@ const Memory = () => {
   useEffect(() => {
     if (firstCard && secondCard) {
       setDisabled(true);
-      if (
-        firstCard.value.toLocaleLowerCase() ===
-        secondCard.value.toLocaleLowerCase()
-      ) {
+      if (firstCard.src === secondCard.src) {
         setCards((prev) => {
           return prev.map((card) => {
-            if (
-              card.value.toLocaleLowerCase() ===
-              firstCard.value.toLocaleLowerCase()
-            ) {
+            if (card.src === firstCard.src) {
               return { ...card, matched: true };
             } else {
               return card;
@@ -104,7 +81,7 @@ const Memory = () => {
           {reveal ? "Hide Cards" : "Reveal all cards"}
         </Button>
       </div>
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-4 gap-6">
         {cards.map((card, index) => {
           const flipped =
             card === firstCard || card === secondCard || card.matched;
@@ -114,17 +91,18 @@ const Memory = () => {
                 <button
                   className={`text-center w-32 h-32 border border-black rounded ${
                     card.matched
-                      ? "bg-green-600/40"
+                      ? "border border-green-400"
                       : wrong
-                      ? " bg-red-600/40"
+                      ? " border border-red-400"
                       : "bg-neutral-700"
                   }`}
                 >
-                  {card.kind === "string" ? (
-                    card.value
-                  ) : (
-                    <img src={`/images/${card.value}.svg`} alt={card.value} />
-                  )}
+                  <Image
+                    src={card.src}
+                    alt={card.alt}
+                    width={120}
+                    height={120}
+                  />
                 </button>
               ) : (
                 <button
