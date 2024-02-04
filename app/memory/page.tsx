@@ -70,9 +70,7 @@ const Memory = () => {
 
   return (
     <main className="flex flex-col items-center pt-24">
-      <text className="text-2xl font-bold text-center pb-5">
-        Synthesis Match
-      </text>
+      <text className="text-2xl font-bold text-center pb-5">Memory Game</text>
       <div className="flex gap-4">
         <Button className="mb-10" onClick={shuffleCards}>
           Shuffle Cards
