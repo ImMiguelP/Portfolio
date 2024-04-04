@@ -2,6 +2,7 @@ import React from "react";
 import Contact from "./Contact";
 import { useHoverOpacity } from "@/hooks/useStyling";
 import { contactinfo } from "./ContactObj";
+import Timeline from "./Timeline";
 
 const ContactMe = () => {
   const { hoveredIndex, handleMouseEnter, handleMouseLeave } =
@@ -13,12 +14,16 @@ const ContactMe = () => {
     <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl space-y-16  lg:mx-0 lg:max-w-none">
-          <h2 className="text-3xl font-bold tracking-tight text-center">
-            About Me
-          </h2>
-          <p className="text-sm leading-6 text-secondary-foreground/60">
-            {myStory}
-          </p>
+          <div>
+            <h2 className="text-3xl font-bold tracking-tight text-center">
+              About Me
+            </h2>
+            <p className="text-sm leading-6 text-secondary-foreground/60">
+              {myStory}
+            </p>
+          </div>
+          <Timeline />
+
           <h2 className="text-3xl font-bold tracking-tight text-center">
             Get in touch
           </h2>
